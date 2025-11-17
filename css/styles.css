@@ -1,0 +1,14 @@
+html{
+    background-color: #e31f26;
+}
+
+body{
+    background-color: white;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+header{
+    text-align: center;
+}

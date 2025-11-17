@@ -1,0 +1,21 @@
+.period-name{
+    font-size:larger;
+}
+
+.temperature{
+    font-size:x-large;
+}
+
+.short-forecast{
+    font-size:medium;
+}
+
+.rain-chance{
+    font-size:small;
+}
+
+.weather-icon{
+    float:left;
+    height:100%;
+    padding-right:20px;
+}

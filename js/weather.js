@@ -16,11 +16,16 @@ async function getWeather() {
 
     for(let i=0; i < periods.length; i++) {
         output.innerHTML += `
-            <div>
-                <h2>${periods[i].name}</h2>
-                <span class="temperature">${periods[i].temperature}°</span>
-                <span class="rainChance">${periods[i].probabilityOfPrecipitation.value}% chance of precipitation
+            <div class="container-fluid mb-4">
+                <img class="weather-icon" src="${periods[i].icon}">
+                <div class="weather-content container">
+                    <span class="period-name">${periods[i].name}</span><br>
+                    <span class="temperature">${periods[i].temperature}°</span>
+                    <span class="short-forecast">${periods[i].shortForecast}</span><br>
+                    <span class="rain-chance">${periods[i].probabilityOfPrecipitation.value}% chance of precipitation
+                </div>
             </div>
+            <hr>
             `;
         }
 }
