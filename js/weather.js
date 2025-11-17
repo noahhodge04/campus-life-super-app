@@ -3,4 +3,26 @@ National Weather Service API call for the forecast area encompassing Winona Lake
 IWX is the code for the Northern Indiana weather station, and (44,45) is the NWS grid coordinate for the area of interest
 The location is set because this app is particularly for Grace College
 */
-const request = "https://api.weather.gov/gridpoints/IWX/44,45/forecast";
+
+const forecastContainer = document.querySelector('#forecast-container');
+
+async function getWeather() {
+    const endpoint = "https://api.weather.gov/gridpoints/IWX/44,45/forecast";
+    const response = await fetch(endpoint);
+    const data = await response.json();
+    const periods = data.properties.periods;
+
+    const output = document.getElementById("forecast-container");
+
+    for(let i=0; i < periods.length; i++) {
+        output.innerHTML += `
+            <div>
+                <h2>${periods[i].name}</h2>
+                <span class="temperature">${periods[i].temperature}°</span>
+                <span class="rainChance">${periods[i].probabilityOfPrecipitation.value}% chance of precipitation
+            </div>
+            `;
+        }
+}
+
+getWeather();
