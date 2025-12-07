@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Link the page's script -->
-    <script src="js/excuses.js"></script>
 
     <!-- Standard navigation bar using Bootstrap -->
     <header class="navbar navbar-expand-lg">
@@ -27,8 +25,18 @@
     </header>
     <div class="container">
         <p>
-            This page will contain a button to call the Excuser API to generate excuses.
+            Click one of the buttons below to generate an excuse. Perfect for hall events and club meetings! For classes, not quite as good as a note from the nurse.
         </p>
+        <button class="btn btn-primary" id="school-button">Excuse for school</button>
+        <button class="btn btn-primary" id="party-button">Excuse for parties and events</button>
+        <button class="btn btn-primary" id="unbelievable-button">Get a ridiculous excuse</button>
+        
+        <div id="excuse-container">
+
+        </div>
     </div>
+
+    <!-- Link the page's script -->
+    <script src="js/excuses.js"></script>
 </body>
 </html>
