@@ -7,13 +7,16 @@ The location is set because this app is particularly for Grace College
 const forecastContainer = document.querySelector('#forecast-container');
 
 async function getWeather() {
+    /* NWS API endpoint for Winona Lake, IN */
     const endpoint = "https://api.weather.gov/gridpoints/IWX/44,45/forecast";
     const response = await fetch(endpoint);
     const data = await response.json();
     const periods = data.properties.periods;
 
+    /* Retrieves the page's designated div for the forecast boxes */
     const output = document.getElementById("forecast-container");
 
+    /* For each period, adds the following block of HTML code for a single forecast box */
     for(let i=0; i < periods.length; i++) {
         output.innerHTML += `
             <div class="container-fluid mb-4">

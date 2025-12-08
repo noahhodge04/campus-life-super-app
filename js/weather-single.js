@@ -4,6 +4,7 @@ IWX is the code for the Northern Indiana weather station, and (44,45) is the NWS
 The location is set because this app is particularly for Grace College
 */
 
+/* Precisely as ./weather.js aside from lines 17 and onward */
 const forecastContainer = document.querySelector('#forecast-container');
 
 async function getWeather() {
@@ -13,6 +14,7 @@ async function getWeather() {
     const periods = data.properties.periods;
 
     const output = document.getElementById("forecast-container");
+    /* Instead of a for loop for each period, only the first period is processed */
     output.innerHTML += `
         <div class="container-fluid mb-4">
             <img class="weather-icon" src="${periods[0].icon}">
