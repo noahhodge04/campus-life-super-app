@@ -29,17 +29,17 @@
         </ul>
     </header>
     <div class="container"> <!-- Overall content container -->
-        <p>
-            This page will contain tables with standard constant information such as dining hall hours and open dorm times. A large image will also be featured here.
-        </p>
-        
         <div class="container mb-4"> <!-- Picture container -->
             <img src="https://www.grace.edu/wp-content/uploads/2020/08/DJI_0020_HDR_edit2-1024x768.jpg" id="image-campus">
         </div>
 
+        <p>
+            Welcome to the Grace College Super App! This site holds useful information for students and visitiors, including the weather on campus, when dining options are available, and when housing areas are open to both male and female guests!
+        </p>
+
         <div class="container mb-4 d-flex flex-wrap" id="widget-container"> <!-- Flexbox container -->
             
-            <div class="p-3" id="alpha-schedule-container"> <!-- -->
+            <div class="p-3" id="alpha-schedule-container"> <!-- Table of Alpha Dining times -->
                 <h5>Alpha Dining Hours</h5>
                 <table class="table table-bordered">
                     <tr>
@@ -69,7 +69,7 @@
                 </table>
             </div>
 
-            <div class="p-3" id="westy-schedule-container">
+            <div class="p-3" id="westy-schedule-container"> <!-- Table of Westy times -->
                 <h5>Westy Grille Hours</h5>
                 <table class="table table-bordered">
                     <tr>
@@ -87,7 +87,7 @@
                 </table>
             </div>
             
-            <div class="p-3" id="open-hours-container">
+            <div class="p-3" id="open-hours-container"> <!-- Table of open hours for dorms -->
                 <h5>Open Hours - Dorms</h5>
                 <table class = "table table-bordered">
                     <tr>
@@ -113,7 +113,43 @@
                 </table>
             </div>
 
-            <div class="p-3" id="forecast-container">
+            <div class="p-3" id="apt-open-hours-container"> <!-- Table of open hours for apartments -->
+                <h5>Open Hours - Apartments</h5>
+                <table class = "table table-bordered">
+                    <tr>
+                        <th>Day</th>
+                        <th>Start</th>
+                        <th>End</th>
+                    </tr>
+                    <tr>
+                        <th>Monday</th>
+                        <td>5:00 PM</td>
+                        <td>9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        <td>5:00 PM</td>
+                        <td>9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th>Friday</td>
+                        <td>5:00 PM</td>
+                        <td>11:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th>Saturday</td>
+                        <td>7:00 PM</td>
+                        <td>11:00 PM</td>
+                    </tr>
+                    <tr>
+                        <th>Sunday</td>
+                        <td>1:00 PM</td>
+                        <td>5:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="p-3" id="forecast-container"> <!-- Single-period weather forecast -->
                 <h5>Current Weather  <a href="weather.html">(see more)</a></h5>
             </div>
 
